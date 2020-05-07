@@ -1,0 +1,44 @@
+https://spacy.io/usage/rule-based-matching
+
+statistical models require training data, so for many situations, rule-based approaches are more practical. This is especially true at the start of a project: you can use a rule-based approach as part of a data collection process, to help you “bootstrap” a statistical model.
+
+
+
+extract_names_from_string
+
+failed case :
+
+Reaper Man by Terry Pratchett. Death from, well, Death's point of view.
+
+solution :
+
+Remove single quotes from string. In some cases single quotes may follow author's name.
+
+
+*****
+
+formats in which multiple recommendations come in single comment :
+
+Example 1 : Newline
+
+Man's Search for Meaning - Viktor Frankl
+
+The Alchemist - Paulo Coelho
+
+
+solution : break a comment by newline, then break by 'by' / '-'
+
+
+
+Example 2 : quotes
+
+So, some books that are deep and meaningful that deal with similar mental health issues are: "Perks of Being A WallFlower", "Turtles All The Way Down", "Looking For Alaska", and "We Were Liars". Meaningful but also difficult to process or grief-filled at times.
+
+
+
+Example 3 : Newline, quotes and by
+
+
+Then it's time for you to read the sequel! "The Boy on the Bridge"!
+
+And then, I suggest "The Passage" trilogy by Justin Cronin
